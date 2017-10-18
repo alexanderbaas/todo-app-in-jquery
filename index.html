@@ -105,7 +105,20 @@
   </div>
 
   <script>
-  	// JavaScript here...
+
+    function toggleDone() {
+      var checkbox = this;
+      $(checkbox).parent().toggleClass("completed");
+    }
+
+
+
+
+    $(document).ready(function() {
+      $("input[type=checkbox]").bind('change', toggleDone);
+      updateCounters();
+    });
+
   </script>
 </body>
 </html>
